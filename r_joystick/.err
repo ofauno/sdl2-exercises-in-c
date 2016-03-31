@@ -1,0 +1,7 @@
+joy.c:492:10: warning: unused parameter 'argc' [-Wunused-parameter]
+main(int argc, char* args[]) {
+         ^
+joy.c:492:22: warning: unused parameter 'args' [-Wunused-parameter]
+main(int argc, char* args[]) {
+                     ^
+2 warnings generated.
