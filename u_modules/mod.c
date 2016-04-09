@@ -77,7 +77,7 @@ main(int argc, char* args[]) {
 			{
 				avg_fps = 0; // avoid high fps at first
 			}
-			
+
 			strcpy(g_timer_text, "");
 			sprintf(g_timer_text, "fps: %f", avg_fps);
 
@@ -92,18 +92,10 @@ main(int argc, char* args[]) {
 			// Clear screen
 			SDL_RenderClear(g_render);
 
-			// texture_render(&g_start_prompt_texture,
-			// 										( SCREEN_WIDTH - g_start_prompt_texture.w ) / 2, 
-			// 										0 );
-			// 										
-			// 			texture_render(&g_pause_prompt_texture,
-			// 										( SCREEN_WIDTH - g_pause_prompt_texture.w ) / 2, 
-			// 										g_pause_prompt_texture.h );
-										
 			texture_render(&g_timer_texture,
 										( SCREEN_WIDTH - g_timer_texture.w ) / 2, 
 										( SCREEN_HEIGHT - g_timer_texture.h ) / 2);
-
+										
 			// Update screen
 			SDL_RenderPresent(g_render);
 			++counted_frames;
@@ -114,9 +106,6 @@ main(int argc, char* args[]) {
 
 	// Deallocate textures
 	texture_free(&g_timer_texture);
-	// texture_free(&g_start_prompt_texture);
-	// texture_free(&g_pause_prompt_texture);
-	
 
 	SDL_DestroyRenderer(g_render);
 	SDL_DestroyWindow(g_window);

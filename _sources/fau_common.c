@@ -126,28 +126,6 @@ is_window_created() {
 
 int game_update() {
 	
-	strcpy(g_timer_text, "");
-	sprintf(g_timer_text, "Milliseconds %u", SDL_GetTicks() - g_start_time);
-	
-	// if( !texture_load_font_string( &g_timer_texture, g_timer_text, g_text_color ) )
-	//   {
-	// 	  printf( "process_events: Unable to render time texture!\n" );
-	//   }
-
-	// remove last committed color 
-	SDL_SetRenderDrawColor(g_render, 0xFF, 0xFF, 0xFF, 0xFF);
-
-	// Clear screen
-	SDL_RenderClear(g_render);
-	
-	// texture_render(&g_timer_texture,
-	// 							( SCREEN_WIDTH - g_timer_texture.w ) / 2, 
-	// 							0 );
-	// 							
-	// texture_render(&g_prompt_texture,
-	// 							( SCREEN_WIDTH - g_prompt_texture.w ) / 2, 
-	// 							( SCREEN_HEIGHT - g_prompt_texture.h ) / 2 );
-	
 	// Update screen
 	SDL_RenderPresent(g_render);
 	return 0;
