@@ -11,9 +11,9 @@
 	typedef SDL_Surface s_surface;
 	typedef SDL_Window 	s_window;
 	typedef SDL_Texture s_texture;
-	typedef SDL_Rect 		s_rect;
+	typedef SDL_Rect 	s_rect;
 	typedef SDL_Point 	s_point;
-	typedef Mix_Chunk		audio_sample;
+	typedef Mix_Chunk	audio_sample;
 	
 	enum
 	ButtonSprite

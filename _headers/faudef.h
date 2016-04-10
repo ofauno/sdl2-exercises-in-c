@@ -2,20 +2,26 @@
 #define FAU_DEF_H
 
 	#include <stdio.h>
+	#include <stdlib.h>
+	#include <time.h>
 
 	#include <fau_common.h>
 	#include <fau_timer.h>
 	#include <fau_texture.h>
 	#include <fau_btn.h>
+	#include <fau_dot.h>
 
 	// FONTS
 	extern TTF_Font* 	g_font;
 	extern texture 		g_timer_texture;
 
+	// dot
+	extern texture 		g_dot_texture;
+
 	extern timer g_timer;
 	extern timer g_fps_timer;
 
-	extern s_window* 			g_window;
+	extern s_window* 		g_window;
 	extern SDL_Renderer* 	g_render;
 
 	// screen
@@ -29,7 +35,7 @@
 	extern s_event 		g_event;
 	extern SDL_Color 	g_text_color;
 	extern Uint32 		g_start_time;
-	extern char	 			g_timer_text[20];
+	extern char	 		g_timer_text[20];
 
 	// buttons
 	extern int BUTTON_WIDTH;

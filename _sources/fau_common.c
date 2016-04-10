@@ -8,8 +8,8 @@ init_render() {
 	// VSync allows the rendering to update at the same time 
 	// as when your monitor updates during vertical refresh
 	// g_render = SDL_CreateRenderer(g_window, -1, SDL_RENDERER_ACCELERATED | SDL_RENDERER_PRESENTVSYNC);
-	// g_render = SDL_CreateRenderer(g_window, -1, SDL_RENDERER_ACCELERATED);
-	g_render = SDL_CreateRenderer(g_window, -1, SDL_RENDERER_PRESENTVSYNC);
+	g_render = SDL_CreateRenderer(g_window, -1, SDL_RENDERER_ACCELERATED);
+	// g_render = SDL_CreateRenderer(g_window, -1, SDL_RENDERER_PRESENTVSYNC);
 
 	if ( !g_render ) {
 		printf("init_render: err render: %s\n", SDL_GetError());
@@ -39,6 +39,11 @@ load_media() {
 	}
 	else
 	{
+		if ( !texture_load(&g_dot_texture, "../_media/dot.bmp") )
+		{
+			printf("load_media: failed to load\n");
+			success = false;
+		}
 		// Set text color as black
     // SDL_Color text__color = { 0, 0, 0, 255 };
     // 		if ( !texture_load_font_string(&g_start_prompt_texture, "Press S to Start or Stop the Timer", text__color))
@@ -142,6 +147,8 @@ process_events(s_event* event) {
 		{
 			user_quit = true;
 		}
+
+		// dot_handle_events(event)
 	}
 	return 0;
 }

@@ -1,0 +1,4 @@
+music.c:8:10: fatal error: 'SDL2/SDL_mixer' file not found
+#include "SDL2/SDL_mixer" // audio
+         ^
+1 error generated.
